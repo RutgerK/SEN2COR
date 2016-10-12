@@ -43,7 +43,7 @@ class L2A_ProcessTile(multiprocessing.Process):
             self.config = pickle.load(f)
             f.close()
         except:
-            stderrWrite('Cannot load configuration\n.' % picFn)
+            stderrWrite('Cannot load configuration\n.%s' % picFn)
  
         self.config._timestamp = datetime.now()
         self.scOnly = self.config.scOnly
